@@ -2,13 +2,11 @@ package ca.georgiancollege.comp1011m2022ice5;
 
 
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -32,6 +30,13 @@ public class CalculateVector2DDistanceController implements Initializable {
     private Spinner<Double> Y2Spinner;
 
     @FXML
+    private Label endingMagnitudeLabel;
+
+    @FXML
+    private Label startingMagnitudeLabel;
+
+
+    @FXML
     void OnCalculateButtonClicked(ActionEvent event)
     {
         //Setup Variables
@@ -43,11 +48,12 @@ public class CalculateVector2DDistanceController implements Initializable {
             float y2 = Y2Spinner.getValue().floatValue();
 
             Vector2D point1 = new Vector2D(x1, y1);
-            DBManager.Instance().insertVector2D(point1);
+            startingMagnitudeLabel.setText(String.valueOf(point1.getMagnitude()));
+            // DBManager.Instance().insertVector2D(point1);
 
             Vector2D point2 = new Vector2D(x2, y2);
-            DBManager.Instance().insertVector2D(point2);
-
+            endingMagnitudeLabel.setText(String.valueOf(point2.getMagnitude()));
+           // DBManager.Instance().insertVector2D(point2);
 
             float distance = Utility.Instance().Distance(point1,point2);
             ResultTextField.setText(String.valueOf(distance));
@@ -73,10 +79,9 @@ public class CalculateVector2DDistanceController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         Utility.Instance().ConfigureVector2DSpinner(X1Spinner, -1000.0, 1000.0, 0.0, 5.0);
-        Utility.Instance().ConfigureVector2DSpinner(Y1Spinner, -1000.0, 1000.0, 0.0, 5.0);
-        Utility.Instance().ConfigureVector2DSpinner(X2Spinner, -1000.0, 1000.0, 0.0, 5.0);
-        Utility.Instance().ConfigureVector2DSpinner(Y2Spinner, -1000.0, 1000.0, 0.0, 5.0);
-
+        Utility.Instance().ConfigureVector2DSpinner(Y1Spinner,-1000.0, 1000.0, 0.0, 5.0);
+        Utility.Instance().ConfigureVector2DSpinner(X2Spinner,-1000.0, 1000.0, 0.0, 5.0);
+        Utility.Instance().ConfigureVector2DSpinner(Y2Spinner,-1000.0, 1000.0, 0.0, 5.0);
 
     }
 

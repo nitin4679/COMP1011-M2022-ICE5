@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="24310d83-1192-45ec-af14-41b4a79904f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Vector2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Vector2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/CalculateVector2DDistanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/CalculateVector2DDistanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/georgiancollege/comp1011m2022ice5/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/georgiancollege/comp1011m2022ice5/calculate-vector2d-distance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ca/georgiancollege/comp1011m2022ice5/calculate-vector2d-distance.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
