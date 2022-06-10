@@ -25,6 +25,9 @@ public class Vector2DTableViewController implements Initializable
     @FXML
     private TableColumn<Vector2D, Float> YColumn;
 
+    @FXML
+    private TableColumn<Vector2D, Float> MagnitudeColumn;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -32,6 +35,7 @@ public class Vector2DTableViewController implements Initializable
        VectorIDColumn.setCellValueFactory(new PropertyValueFactory<>("ID"));
        XColumn.setCellValueFactory(new PropertyValueFactory<>("X"));
        YColumn.setCellValueFactory(new PropertyValueFactory<>("Y"));
+       MagnitudeColumn.setCellValueFactory(new PropertyValueFactory<>("Magnitude"));
 
        tableView.getItems().addAll(DBManager.Instance().readVectorTable());
 
