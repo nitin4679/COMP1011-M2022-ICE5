@@ -13,6 +13,7 @@ public class Vector2D {
     private float m_x;
     private float m_y;
 
+
     //Constructors
 
     /**
@@ -95,6 +96,12 @@ public class Vector2D {
     public void setX(float new_x) {
         m_x = new_x;
     }
+
+    // computed read-only property
+    public float getMagnitude() {
+        return Utility.Instance().Distance(new Vector2D(0.0f,0.0f), this);
+    }
+
 
 
 
