@@ -131,9 +131,19 @@ public class DBManager
     public XYChart.Series<String, Float> getMagnitude()
     {  // step 1 - create a Series
         XYChart.Series<String, Float> magnitudes = new XYChart.Series<>();
+        magnitudes.setName("2022");
         // Step 2 - get the data from the Database
         ArrayList<Vector2D> vectors = readVectorTable();
         // step 3 - for each vector in the data .... loop and add it to the Series
+
+        // mock data example
+        /*
+        magnitudes.getData().add(new XYChart.Data<>("0,0", 0.0f));
+        magnitudes.getData().add(new XYChart.Data<>("10,20", 10.0f));
+        magnitudes.getData().add(new XYChart.Data<>("30,40", 20.0f));
+        magnitudes.getData().add(new XYChart.Data<>("50,80", 30.0f));
+        */
+
         for (var vector : vectors)
         {
             var chartData = new XYChart.Data<>(vector.toString(), vector.getMagnitude());
