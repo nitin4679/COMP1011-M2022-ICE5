@@ -146,7 +146,7 @@ public class DBManager
 
         for (var vector : vectors)
         {
-            var chartData = new XYChart.Data<>(vector.toString(), vector.getMagnitude());
+            var chartData = new XYChart.Data<>(vector.toOneDecimalString(), vector.getMagnitude());
             magnitudes.getData().add(chartData);
         }
         return magnitudes;
